@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.pythonPath": "C:\\Users\\sjgro\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "git.ignoreLimitWarning": true
+}
