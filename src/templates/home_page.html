@@ -2,7 +2,8 @@
 {% load static %}
 
 <title>Home Page | Template</title>
-
+{% block base_head %}
+<link rel='stylesheet' href='{% static "css/main.css" %}' >
 {% block content %}
 <div class='text-center'>
     <h1>{{ title }}</h1>
@@ -21,7 +22,6 @@
       <h1>Premium</h1>
       {{ premium_content }}
     </div>
-      <h4>Yeeeeeah</h4>
     {% endif %}
   </div>
 {% endblock %}
