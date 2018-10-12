@@ -6,7 +6,7 @@ from .forms import ContactForm, LoginForm, RegisterForm
 def home_page(request):
     context = {
         "title":"Hello World!",
-        "content":" Welcome to the homepage",  
+        "content":" Welcome to the homepage",
         #premium_content": "YEEAHHH"
 
     }
@@ -22,12 +22,13 @@ def about_page(request):
     }
     return render(request, "home_page.html", context)
 
+
 def contact_page(request):
     contact_form = ContactForm(request.POST or None)
     context = {
-        "title":"Contact",
-        "content":" Welcome to the contact page",
-        "form": contact_form 
+        "title": "Contact",
+        "content": " Welcome to the contact page.",
+        "form": contact_form,
     }
     if contact_form.is_valid():
         print(contact_form.cleaned_data)
@@ -61,12 +62,12 @@ def login_page(request):
             return redirect("/")
         else:
             # Return an 'invalid login' error message.
-            print("ERROR")        
-    
+            print("ERROR")
+
     return render(request, "auth/login.html", context)
 User = get_user_model()
 def register_page(request):
-    form = RegisterForm(request.POST or None)        
+    form = RegisterForm(request.POST or None)
     context = {
         "form": form
     }
